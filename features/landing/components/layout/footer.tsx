@@ -31,10 +31,7 @@ export function Footer({ data }: FooterProps) {
     <footer className="border-t bg-muted/30">
       <div className="mx-auto max-w-6xl px-4 py-12 grid gap-8 md:grid-cols-4">
         <div className="space-y-2">
-          {data?.logo_url && (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={data.logo_url} alt="Logo" className="h-8 w-auto" />
-          )}
+          {data?.logo_url && <img src={data.logo_url} alt="Logo" className="h-8 w-auto" />}
           {data?.about_text && <p className="text-sm text-muted-foreground">{data.about_text}</p>}
         </div>
         {columns.map((col) => (

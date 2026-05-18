@@ -28,12 +28,7 @@ export function Navbar({ data }: NavbarProps) {
     <header className="border-b sticky top-0 z-50 bg-background/80 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between p-4">
         <Link href="/" className="font-semibold">
-          {data?.logo_url ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={data.logo_url} alt="Logo" className="h-8 w-auto" />
-          ) : (
-            'Brand'
-          )}
+          {data?.logo_url ? <img src={data.logo_url} alt="Logo" className="h-8 w-auto" /> : 'Brand'}
         </Link>
         <ul className="hidden md:flex items-center gap-6 text-sm">
           {navLinks.map((link) => (
