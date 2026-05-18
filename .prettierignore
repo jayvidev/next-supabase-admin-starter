@@ -7,3 +7,6 @@ build/
 
 README.md
 LICENSE
+
+# Markdown handled by humans / linters
+*.md
