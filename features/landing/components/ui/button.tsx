@@ -12,15 +12,15 @@ interface ButtonProps {
 }
 
 const variants = {
-  primary: 'bg-primary text-white hover:bg-primary-dark',
-  outline: 'border border-white text-white hover:bg-white/10',
-  ghost: 'text-text hover:bg-black/5',
+  primary: 'text-gray-900 bg-white hover:bg-gray-100 border border-white/20',
+  outline: 'text-white bg-white/5 hover:bg-white/10 border border-white/10',
+  ghost: 'text-white/80 hover:text-white hover:bg-white/10',
 }
 
 const sizes = {
-  sm: 'px-5 py-2.5 text-sm',
-  md: 'px-6 py-3.5 text-base',
-  lg: 'px-8 py-4 text-lg',
+  sm: 'h-9 px-4 py-2 text-sm',
+  md: 'h-11 px-5 py-3 text-base',
+  lg: 'h-12 px-6 py-3.5 text-lg',
 }
 
 export function Button({
@@ -32,7 +32,7 @@ export function Button({
   ...rest
 }: ButtonProps) {
   const classes = cn(
-    'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-[42px] font-semibold tracking-[-0.02em] transition-all duration-200 cursor-pointer outline-none',
+    'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-all outline-none cursor-pointer',
     variants[variant],
     sizes[size],
     className
