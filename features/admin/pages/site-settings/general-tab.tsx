@@ -70,7 +70,7 @@ export function GeneralTab() {
               <FormItem>
                 <FormLabel>Site Name *</FormLabel>
                 <FormControl>
-                  <Input placeholder="Vertex Glass Atlanta" {...field} />
+                  <Input placeholder="My Company" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>

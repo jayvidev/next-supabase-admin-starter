@@ -202,7 +202,7 @@ export function FooterPage({ pathname }: { pathname: string }) {
                 <FormItem>
                   <FormLabel className="text-xs text-muted-foreground">Copyright Text</FormLabel>
                   <FormControl>
-                    <Input placeholder="e.g. © 2026 Vertex Glass LLC" {...field} />
+                    <Input placeholder="e.g. © 2026 My Company LLC" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

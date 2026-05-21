@@ -34,14 +34,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             >
               <Link href="/admin/layout/header">
                 <div className="flex aspect-square size-8 items-center justify-center rounded-lg overflow-hidden">
-                  <img
-                    src="/icons/logo-icon.svg"
-                    alt="Vertex Logo"
-                    className="size-full object-contain"
-                  />
+                  <img src="/icons/logo-icon.svg" alt="Logo" className="size-full object-contain" />
                 </div>
                 <div className="grid flex-1 text-left text-sm leading-tight group-data-[collapsible=icon]:hidden">
-                  <span className="truncate font-semibold">Vertex Glass</span>
+                  <span className="truncate font-semibold">My App</span>
                   <span className="truncate text-xs">Admin</span>
                 </div>
               </Link>

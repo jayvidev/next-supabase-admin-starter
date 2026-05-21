@@ -35,3 +35,19 @@ These are server-only because they use the API secret.
 `features/admin/components/form/cloudinary-media-picker.tsx` and `media-url-input.tsx` open the Cloudinary widget and return a `secure_url`. Persist that URL to the database — never the raw file.
 
 The `/admin/media` page (`features/admin/pages/media/`) lists uploads and lets you delete/rename them.
+
+## Tracking image usage
+
+`features/admin/api/media-usage.ts` exports `mediaUsageApi.getUsage()`, which returns a map of `{ [url]: label[] }`. The Media page uses this to show where each image is referenced.
+
+The file ships empty. Add a `Promise.all` querying whichever columns hold image URLs in your tables:
+
+```ts
+const [{ data: testimonials }] = await Promise.all([
+  supabase.from('testimonials').select('image_url'),
+])
+
+testimonials?.forEach((r) => addUsage(r.image_url, 'Testimonials'))
+```
+
+Add one entry per table/field. The `addJsonUsage` helper scans Cloudinary URLs inside JSON columns.

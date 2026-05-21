@@ -19,7 +19,7 @@ export function LoginPage() {
       <div className="bg-muted hidden lg:block relative overflow-hidden">
         <img
           src="/images/assets/logo-green-background.webp"
-          alt="Vertex Glass"
+          alt="Admin login"
           className="absolute inset-0 w-full h-full object-cover"
         />
       </div>

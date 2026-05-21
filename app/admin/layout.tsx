@@ -9,8 +9,8 @@ export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Vertex Admin',
-    default: 'Admin - Vertex Glass',
+    template: '%s - Admin',
+    default: 'Admin Panel',
   },
 }
 
