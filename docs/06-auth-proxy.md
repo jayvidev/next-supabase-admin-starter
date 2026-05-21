@@ -40,4 +40,4 @@ The shipped RLS allows any `authenticated` user full access. To add admin-only:
 1. New migration: a `profiles` table joined to `auth.users` with a `role` column, or use Supabase custom claims.
 2. In `proxy.ts`, after `getUser()`, fetch the role and redirect non-admins.
 3. Tighten RLS: replace `auth_all` with `auth_admin` policy that checks `auth.jwt() ->> 'role' = 'admin'` (or the equivalent against `profiles`).
-4. Optionally enable role-based sidebar filtering in `features/admin/components/sidebar/sidebar-data.ts` (the `isSuperAdmin` argument is already plumbed; see `marketingvip.co` for a reference implementation).
+4. Optionally enable role-based sidebar filtering in `features/admin/components/sidebar/sidebar-data.ts` (the `isSuperAdmin` argument is already plumbed).

@@ -1,6 +1,6 @@
 # 08 — i18n (optional)
 
-The starter's `main` branch is **mono-lingual**. If you need a bilingual site, base it on the `i18n` branch (planned; reference implementation lives in `marketingvip.co`).
+The starter's `main` branch is **mono-lingual**. If you need a bilingual site, base it on the `i18n` branch (planned).
 
 ## What `i18n` adds
 

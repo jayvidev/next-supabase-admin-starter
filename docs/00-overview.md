@@ -9,7 +9,7 @@ A reusable base for projects that need:
 - **Supabase** as the database / auth provider;
 - **Cloudinary** for media.
 
-It is the de-duplicated essence of two production sites (`vertexglassatlanta.com`, `marketingvip.co`). Vertex-specific business sections were removed; only the architectural pieces and the patterns to extend them are kept.
+Extracted from production use. Business-specific sections were removed; only the architectural pieces and the patterns to extend them are kept.
 
 ## Mental model
 

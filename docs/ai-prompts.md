@@ -32,4 +32,4 @@ Copy-paste these into Claude Code / Cursor / Copilot Chat to extend the starter 
 
 ## Migrate to i18n
 
-> Add `next-intl` to this project. Follow `docs/08-i18n-optional.md` exactly: create `i18n/routing.ts` + `i18n/request.ts` with locales `['es', 'en']`, defaultLocale `'es'`, `localePrefix: 'as-needed'`. Wrap `next.config.ts` with `createNextIntlPlugin`. Restructure `app/(landing)/` under `[lang]/`. Generate migrations to rename existing translatable columns to `_es` and add `_en` siblings. Update Zod schemas and admin pages to use `TranslatableField` (port it from `marketingvip.co`).
+> Add `next-intl` to this project. Follow `docs/08-i18n-optional.md` exactly: create `i18n/routing.ts` + `i18n/request.ts` with locales `['es', 'en']`, defaultLocale `'es'`, `localePrefix: 'as-needed'`. Wrap `next.config.ts` with `createNextIntlPlugin`. Restructure `app/(landing)/` under `[lang]/`. Generate migrations to rename existing translatable columns to `_es` and add `_en` siblings. Update Zod schemas and admin pages to use `TranslatableField`.
