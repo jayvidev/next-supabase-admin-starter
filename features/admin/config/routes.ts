@@ -6,10 +6,12 @@ export type SidebarGroup = (typeof sidebarGroups)[number]
 export const sidebarSubgroups = [] as const
 export type SidebarSubgroup = never
 
+// Must be typed as a plain index signature so sidebar-data.ts compiles
+// even when there are no subgroups defined yet.
 export const subgroupMeta: Record<
-  SidebarSubgroup,
+  string,
   { title: string; icon: React.ElementType; defaultOpen?: boolean }
-> = {} as Record<SidebarSubgroup, never>
+> = {}
 
 export type AdminRoute = {
   title: string
