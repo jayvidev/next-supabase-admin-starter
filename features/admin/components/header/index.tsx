@@ -1,6 +1,7 @@
 import { ExternalLink } from 'lucide-react'
 import Link from 'next/link'
 
+import { ThemeToggle } from '@/components/shared/theme-toggle'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { SidebarTrigger } from '@/components/ui/sidebar'
@@ -24,6 +25,7 @@ export function Header() {
               Landing
             </Link>
           </Button>
+          <ThemeToggle />
           <ProfileDropdown />
         </div>
       </div>

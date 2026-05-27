@@ -28,7 +28,7 @@ export function AdminProviders({ children }: { children: ReactNode }) {
       <ThemeProvider
         attribute="class"
         defaultTheme="light"
-        forcedTheme="light"
+        enableSystem={false}
         disableTransitionOnChange
       >
         <NextTopLoader
