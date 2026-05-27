@@ -42,6 +42,8 @@ pnpm dev                        # runs without Supabase — admin auth bypassed
 To enable Supabase, set the two `NEXT_PUBLIC_SUPABASE_*` vars, then:
 
 ```bash
+cp supabase/config.example.toml supabase/config.toml   # gitignored & project-specific; set project_id, real cloud ref comes from `supabase link`
+
 # Local stack
 pnpm db:start                   # docker-based local stack
 pnpm db:reset                   # applies migrations + seed.sql
