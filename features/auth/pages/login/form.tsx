@@ -19,6 +19,7 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Spinner } from '@/components/ui/spinner'
+import { config } from '@/config'
 import { createClient } from '@/lib/supabase/client'
 
 const schema = z.object({
@@ -40,6 +41,10 @@ export function LoginForm() {
   })
 
   async function onSubmit(values: FormValues) {
+    if (!config.supabase.enabled) {
+      setAuthError('Authentication is disabled until Supabase is configured.')
+      return
+    }
     setIsLoading(true)
     setAuthError(null)
     const supabase = createClient()

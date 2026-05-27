@@ -12,13 +12,23 @@ Next.js 16 + Supabase + shadcn starter. Two halves: a **public landing** rendere
 - Supabase CLI workflow: versioned migrations in `supabase/migrations/`, `pnpm db:push`, `pnpm db:types` for typed clients.
 - Cloudinary API routes for signing/listing/deleting/renaming uploads.
 
+## Supabase is optional
+
+The app **boots and builds without a database**. `config.supabase.enabled` auto-derives from the two `NEXT_PUBLIC_SUPABASE_*` env vars: leave them blank to run the landing + admin shell with auth bypassed (great before you have a project), fill them in later to turn auth + DB on — no code changes. Committed `database.types.ts` baseline means types never break in the meantime. Details: [docs/10-supabase-optional.md](./docs/10-supabase-optional.md).
+
 ## Quickstart
 
 ```bash
 pnpm install
-cp .env.example .env.local      # fill Supabase + Cloudinary
+cp .env.example .env.local      # Cloudinary now; Supabase optional (see above)
 
-# Local Supabase (optional)
+pnpm dev                        # runs without Supabase — admin auth bypassed
+```
+
+To enable Supabase, set the two `NEXT_PUBLIC_SUPABASE_*` vars, then:
+
+```bash
+# Local stack
 pnpm db:start                   # docker-based local stack
 pnpm db:reset                   # applies migrations + seed.sql
 
@@ -32,7 +42,7 @@ pnpm dev
 
 Visit:
 - `http://localhost:3000` — landing
-- `http://localhost:3000/admin` — redirects to `/admin/login` until you sign in (create an admin user in Supabase Studio → Authentication)
+- `http://localhost:3000/admin` — with Supabase on, redirects to `/admin/login` until you sign in (create an admin user in Supabase Studio → Authentication); with it off, the panel loads directly.
 
 ## Docs
 
@@ -48,6 +58,7 @@ Read in order:
 8. [07 — Cloudinary](./docs/07-cloudinary.md)
 9. [08 — i18n (optional)](./docs/08-i18n-optional.md)
 10. [09 — Deploy](./docs/09-deploy.md)
-11. [AI prompts (copy-paste for Claude/Cursor)](./docs/ai-prompts.md)
+11. [10 — Supabase (optional)](./docs/10-supabase-optional.md)
+12. [AI prompts (copy-paste for Claude/Cursor)](./docs/ai-prompts.md)
 
 Project-level conventions: [CLAUDE.md](./CLAUDE.md).

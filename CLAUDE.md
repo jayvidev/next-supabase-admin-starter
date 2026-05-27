@@ -10,6 +10,7 @@ Project conventions for AI coding agents working on this starter (and any projec
   - `lib/supabase/server.ts` — Server Components, Server Actions, Route Handlers.
   - `lib/supabase/client.ts` — Client Components (memoized).
   - `lib/supabase/public-client.ts` — anonymous read-only landing queries.
+- **Supabase is optional.** `config.supabase.enabled` auto-derives from the two env vars; when absent the app runs with auth bypassed and no DB. Guard any new Supabase caller with `if (config.supabase.enabled)`. Full behaviour in `docs/10-supabase-optional.md`. `database.types.ts` ships a committed empty baseline, so types never break without a linked project.
 - **Auth/route protection lives only in `proxy.ts` at the repo root.** Next 16 renamed `middleware.ts` → `proxy.ts`. Do **not** create `middleware.ts`. Do not split into helpers — keep the Supabase client construction inline.
 - Path aliases: `@admin/*`, `@landing/*`, `@auth/*`, `@/*`.
 

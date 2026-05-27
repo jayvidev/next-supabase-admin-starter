@@ -6,7 +6,7 @@ A reusable base for projects that need:
 
 - a **marketing landing** rendered statically (with ISR);
 - an **admin CMS** that edits the landing's content live;
-- **Supabase** as the database / auth provider;
+- **Supabase** as the database / auth provider (**optional** — the app runs without it; see `10-supabase-optional.md`);
 - **Cloudinary** for media.
 
 Extracted from production use. Business-specific sections were removed; only the architectural pieces and the patterns to extend them are kept.

@@ -27,6 +27,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
+import { config } from '@/config'
 import { createClient } from '@/lib/supabase/client'
 import { getInitials } from '@/lib/utils'
 
@@ -46,8 +47,10 @@ export function ProfileDropdown() {
   }
 
   const handleLogout = async () => {
-    const supabase = createClient()
-    await supabase.auth.signOut()
+    if (config.supabase.enabled) {
+      const supabase = createClient()
+      await supabase.auth.signOut()
+    }
     router.push('/admin/login')
   }
 

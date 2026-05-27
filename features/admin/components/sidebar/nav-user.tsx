@@ -32,6 +32,7 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from '@/components/ui/sidebar'
+import { config } from '@/config'
 import { createClient } from '@/lib/supabase/client'
 import { getInitials } from '@/lib/utils'
 
@@ -111,8 +112,10 @@ export function NavUser() {
               <AlertDialogAction
                 variant="destructive"
                 onClick={async () => {
-                  const supabase = createClient()
-                  await supabase.auth.signOut()
+                  if (config.supabase.enabled) {
+                    const supabase = createClient()
+                    await supabase.auth.signOut()
+                  }
                   router.push('/admin/login')
                 }}
               >

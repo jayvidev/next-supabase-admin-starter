@@ -33,6 +33,11 @@ Fill in:
 
 ## 3. Supabase: choose local or remote
 
+> **Optional.** Skip this entire step to develop without a database — leave the
+> two `NEXT_PUBLIC_SUPABASE_*` vars blank and `pnpm dev` still runs (admin auth
+> bypassed, no DB). Steps 3–5 only apply once you turn Supabase on. See
+> [10 — Supabase (optional)](./10-supabase-optional.md).
+
 ### Option A — Local (recommended for dev)
 
 ```bash

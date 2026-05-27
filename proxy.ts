@@ -4,6 +4,10 @@ import { type NextRequest, NextResponse } from 'next/server'
 import { config as appConfig } from '@/config'
 
 export async function proxy(request: NextRequest) {
+  if (!appConfig.supabase.enabled) {
+    return NextResponse.next({ request })
+  }
+
   let response = NextResponse.next({ request })
 
   const supabase = createServerClient(appConfig.supabase.url, appConfig.supabase.anonKey, {

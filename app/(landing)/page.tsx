@@ -111,7 +111,12 @@ export default function Home() {
       </div>
 
       <div className="relative flex flex-wrap justify-center gap-4">
-        <Button href="https://github.com" target="_blank" rel="noopener noreferrer" size="sm">
+        <Button
+          href="https://github.com/jayvidev/landing-admin-starter"
+          target="_blank"
+          rel="noopener noreferrer"
+          size="sm"
+        >
           <svg viewBox="0 0 24 24" className="size-4" aria-hidden="true">
             <path
               d="M12 2C6.477 2 2 6.59 2 12.253c0 4.53 2.865 8.372 6.839 9.728.5.095.682-.223.682-.495 0-.244-.009-.892-.014-1.75-2.782.615-3.369-1.372-3.369-1.372-.454-1.176-1.11-1.49-1.11-1.49-.908-.642.069-.63.069-.63 1.004.073 1.532 1.058 1.532 1.058.892 1.565 2.341 1.113 2.91.851.092-.667.35-1.113.636-1.37-2.22-.262-4.555-1.139-4.555-5.07 0-1.12.39-2.034 1.03-2.75-.103-.262-.446-1.315.097-2.741 0 0 .84-.275 2.75 1.05.798-.228 1.655-.342 2.505-.346.85.004 1.707.118 2.505.346 1.909-1.325 2.748-1.05 2.748-1.05.544 1.426.201 2.479.098 2.741.64.716 1.028 1.63 1.028 2.75 0 3.941-2.339 4.805-4.566 5.062.359.317.678.944.678 1.903 0 1.374-.012 2.48-.012 2.817 0 .274.18.594.688.494C19.137 20.62 22 16.781 22 12.253 22 6.59 17.523 2 12 2z"
@@ -121,7 +126,7 @@ export default function Home() {
           GitHub
         </Button>
         <Button
-          href="https://supabase.com"
+          href="https://github.com/jayvidev/landing-admin-starter/tree/main/docs"
           target="_blank"
           rel="noopener noreferrer"
           size="sm"
