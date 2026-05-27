@@ -1,28 +1,18 @@
+/**
+ * Anchor ids for landing sections, per language.
+ *
+ * Used for in-page navigation (e.g. <a href={`#${sectionIds[lang].services}`}>).
+ * Fill in your own sections once you build the landing.
+ *
+ * Example:
+ *   export const sectionIds = {
+ *     es: { home: 'inicio', services: 'servicios', contact: 'contactanos' },
+ *     en: { home: 'home', services: 'services', contact: 'contact' },
+ *   } as const
+ */
 export const sectionIds = {
-  es: {
-    home: 'inicio',
-    services: 'servicios',
-    projects: 'proyectos',
-    process: 'proceso',
-    achievements: 'logros',
-    testimonials: 'testimonios',
-    team: 'equipo',
-    aboutUs: 'nosotros',
-    faqs: 'faqs',
-    contact: 'contactanos',
-  },
-  en: {
-    home: 'home',
-    services: 'services',
-    projects: 'projects',
-    process: 'process',
-    achievements: 'achievements',
-    testimonials: 'testimonials',
-    team: 'team',
-    aboutUs: 'about-us',
-    faqs: 'faqs',
-    contact: 'contact',
-  },
+  es: {},
+  en: {},
 } as const
 
-export type Lang = 'es' | 'en'
+export type Lang = keyof typeof sectionIds
