@@ -36,22 +36,14 @@
     "**/.next": true,
     "**/node_modules": true,
     "**/.vercel": true,
-    "**/out": true
+    "**/out": true,
+    "**/supabase/.temp": true
   },
   "search.exclude": {
     "**/.next": true,
     "**/node_modules": true,
     "**/.vercel": true,
-    "**/out": true
-  },
-  "tailwindCSS.lint.suggestCanonicalClasses": "warning",
-  "tailwindCSS.lint.invalidScreen": "error",
-  "tailwindCSS.lint.invalidVariant": "error",
-  "tailwindCSS.lint.invalidConfigPath": "error",
-  "tailwindCSS.lint.invalidTailwindDirective": "error",
-  "tailwindCSS.experimental.classRegex": [
-    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*)[\"'`]"],
-    ["cn\\(([^)]*)\\)", "[\"'`]([^\"'`]*)[\"'`]"]
-  ],
-  "tailwindCSS.experimental.configFile": "app/(landing)/globals.css"
+    "**/out": true,
+    "**/supabase/.temp": true
+  }
 }
