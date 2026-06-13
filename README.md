@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://landing-admin-starter.vercel.app">
+  <a href="https://next-supabase-admin-starter.vercel.app">
     <img src="./public/images/assets/readme.jpg" alt="Preview">
   </a>
   <p></p>
