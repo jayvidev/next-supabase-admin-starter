@@ -73,5 +73,5 @@ Supabase Studio → Authentication → Users → Add user (email + password). Th
 pnpm dev
 ```
 
-- `http://localhost:3000` — landing
+- `http://localhost:3000` — site
 - `http://localhost:3000/admin` — `proxy.ts` redirects you to `/admin/login` until authenticated.

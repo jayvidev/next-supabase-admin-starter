@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     default: 'Next.js + Supabase Admin Starter',
     template: '%s | Next.js + Supabase Admin Starter',
   },
-  description: 'Next.js + Supabase landing & admin starter',
+  description: 'Next.js + Supabase site & admin starter',
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {

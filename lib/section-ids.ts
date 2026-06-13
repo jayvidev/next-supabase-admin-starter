@@ -1,8 +1,8 @@
 /**
- * Anchor ids for landing sections, per language.
+ * Anchor ids for site sections, per language.
  *
  * Used for in-page navigation (e.g. <a href={`#${sectionIds[lang].services}`}>).
- * Fill in your own sections once you build the landing.
+ * Fill in your own sections once you build the site.
  *
  * Example:
  *   export const sectionIds = {

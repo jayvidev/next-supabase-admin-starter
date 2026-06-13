@@ -132,7 +132,7 @@ export default function Page() {
 
 (Sidebar updates automatically.)
 
-## 7. Landing read (optional)
+## 7. Site read (optional)
 
 `lib/supabase/server-queries.ts`:
 
@@ -148,7 +148,7 @@ export const getTestimonials = unstable_cache(
 )
 ```
 
-Then render `<Testimonials data={await getTestimonials()} />` in `app/(landing)/page.tsx`.
+Then render `<Testimonials data={await getTestimonials()} />` in `app/(site)/page.tsx`.
 
 ## 8. Invalidate cache on save
 
@@ -156,7 +156,7 @@ When wiring the form's submit, pass the cache tag:
 
 ```ts
 await testimonialsApi.update(id, values)
-await revalidateLandingCache([cacheTags.testimonials])
+await revalidateSiteCache([cacheTags.testimonials])
 ```
 
 (`useResourceForm` accepts a `revalidateTags` option that does this for you.)

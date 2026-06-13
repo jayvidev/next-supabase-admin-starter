@@ -8,7 +8,7 @@ import { type DefaultValues, type FieldValues, useForm } from 'react-hook-form'
 import { toast } from 'sonner'
 import type { ZodType } from 'zod'
 
-import { revalidateLandingCache } from '@admin/actions/revalidate'
+import { revalidateSiteCache } from '@admin/actions/revalidate'
 
 interface UseResourceFormOptions<TData, TFormValues extends FieldValues, TListItem = unknown> {
   fetchFn?: () => Promise<TData>
@@ -96,7 +96,7 @@ export function useResourceForm<
           queryClient.invalidateQueries({ queryKey })
         }
 
-        revalidateLandingCache().catch(() => {})
+        revalidateSiteCache().catch(() => {})
 
         onSuccess?.()
       } catch (err) {

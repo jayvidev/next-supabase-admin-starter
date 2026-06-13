@@ -22,7 +22,7 @@ export function Header() {
           <Button variant="ghost" asChild>
             <Link href="/" target="_blank" rel="noopener noreferrer">
               <ExternalLink />
-              Landing
+              Site
             </Link>
           </Button>
           <ThemeToggle />

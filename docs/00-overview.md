@@ -4,8 +4,8 @@
 
 A reusable base for projects that need:
 
-- a **marketing landing** rendered statically (with ISR);
-- an **admin CMS** that edits the landing's content live;
+- a **marketing site** rendered statically (with ISR);
+- an **admin CMS** that edits the site's content live;
 - **Supabase** as the database / auth provider (**optional** — the app runs without it; see `10-supabase-optional.md`);
 - **Cloudinary** for media.
 
@@ -15,13 +15,13 @@ Extracted from production use. Business-specific sections were removed; only the
 
 ```
 ┌──────────────────────────────────────────────────────────┐
-│  app/(landing)        →  force-static, reads via         │
+│  app/(site)        →  force-static, reads via         │
 │                          lib/supabase/server-queries.ts  │
 │                          (unstable_cache + tags)          │
 │                                                          │
 │  app/admin/(panel)    →  force-dynamic, mutates via      │
 │                          features/admin/api/<resource>.ts│
-│                          → revalidateTag → landing       │
+│                          → revalidateTag → site       │
 │                          regenerates next request        │
 └──────────────────────────────────────────────────────────┘
                               ↑
@@ -31,14 +31,14 @@ Extracted from production use. Business-specific sections were removed; only the
                        supabase/migrations/*.sql
 ```
 
-Two render modes, one DB. The admin writes, tags get invalidated, the landing rebuilds the affected page on the next visit.
+Two render modes, one DB. The admin writes, tags get invalidated, the site rebuilds the affected page on the next visit.
 
 ## Layers
 
 | Layer | Where | Purpose |
 |---|---|---|
-| Routes | `app/` | App Router pages, route groups for landing vs admin |
-| Features | `features/{admin,landing,auth}/` | All business UI lives here, grouped by domain |
+| Routes | `app/` | App Router pages, route groups for site vs admin |
+| Features | `features/{admin,site,auth}/` | All business UI lives here, grouped by domain |
 | Shared UI | `components/ui/` | shadcn primitives, used by both halves |
 | Data | `lib/supabase/` | Server/browser/public clients + cached queries |
 | Config | `config/`, `features/admin/config/` | Env, routes, sidebar |

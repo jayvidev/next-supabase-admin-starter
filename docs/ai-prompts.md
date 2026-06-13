@@ -11,12 +11,12 @@ Copy-paste these into Claude Code / Cursor / Copilot Chat to extend the starter 
 > 4. Create a Zod schema in `features/admin/schemas/<resource>.schema.ts`.
 > 5. Create `features/admin/pages/<resource>/index.tsx` with a `TableListLayout` + `DataTable` + create/edit dialog backed by `useResourceForm`.
 > 6. Wire `app/admin/(panel)/<route>/page.tsx` and add the route to `features/admin/config/routes.ts` (sidebar entry).
-> 7. If used by the landing, add a `get<Resource>` in `lib/supabase/server-queries.ts` and call it in `app/(landing)/page.tsx`.
+> 7. If used by the site, add a `get<Resource>` in `lib/supabase/server-queries.ts` and call it in `app/(site)/page.tsx`.
 > Remind me to run `pnpm db:push` and `pnpm db:types`.
 
-## Add a landing section
+## Add a site section
 
-> Create a new landing section component `features/landing/sections/<name>.tsx` that takes `data` from `get<Resource>()` and renders <describe layout>. Add it to `app/(landing)/page.tsx` inside the existing `Promise.all`.
+> Create a new site section component `features/site/sections/<name>.tsx` that takes `data` from `get<Resource>()` and renders <describe layout>. Add it to `app/(site)/page.tsx` inside the existing `Promise.all`.
 
 ## Add a settings tab
 
@@ -32,4 +32,4 @@ Copy-paste these into Claude Code / Cursor / Copilot Chat to extend the starter 
 
 ## Migrate to i18n
 
-> Add `next-intl` to this project. Follow `docs/08-i18n-optional.md` exactly: create `i18n/routing.ts` + `i18n/request.ts` with locales `['es', 'en']`, defaultLocale `'es'`, `localePrefix: 'as-needed'`. Wrap `next.config.ts` with `createNextIntlPlugin`. Restructure `app/(landing)/` under `[lang]/`. Generate migrations to rename existing translatable columns to `_es` and add `_en` siblings. Update Zod schemas and admin pages to use `TranslatableField`.
+> Add `next-intl` to this project. Follow `docs/08-i18n-optional.md` exactly: create `i18n/routing.ts` + `i18n/request.ts` with locales `['es', 'en']`, defaultLocale `'es'`, `localePrefix: 'as-needed'`. Wrap `next.config.ts` with `createNextIntlPlugin`. Restructure `app/(site)/` under `[lang]/`. Generate migrations to rename existing translatable columns to `_es` and add `_en` siblings. Update Zod schemas and admin pages to use `TranslatableField`.

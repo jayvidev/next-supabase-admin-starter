@@ -1,8 +1,8 @@
-# 05 — Landing & ISR
+# 05 — Site & ISR
 
 ## Render mode
 
-`app/(landing)/page.tsx` sets:
+`app/(site)/page.tsx` sets:
 
 ```ts
 export const dynamic = 'force-static'
@@ -12,7 +12,7 @@ The page is generated once at build time and served from the edge cache until a 
 
 ## Cached queries
 
-`lib/supabase/server-queries.ts` wraps every landing read with `unstable_cache`:
+`lib/supabase/server-queries.ts` wraps every site read with `unstable_cache`:
 
 ```ts
 export const getHero = unstable_cache(
@@ -34,8 +34,8 @@ Key parts:
 
 ```ts
 'use server'
-export async function revalidateLandingCache(tags?: CacheTag[]) {
-  const toInvalidate = tags && tags.length ? tags : allLandingTags
+export async function revalidateSiteCache(tags?: CacheTag[]) {
+  const toInvalidate = tags && tags.length ? tags : allSiteTags
   for (const tag of toInvalidate) revalidateTag(tag, 'max')
   revalidatePath('/', 'layout')
 }
@@ -46,11 +46,11 @@ export async function revalidateLandingCache(tags?: CacheTag[]) {
 
 `useResourceForm({ revalidateTags: [cacheTags.hero] })` calls this for you after a successful `onSubmit`.
 
-## Adding a new landing read
+## Adding a new site read
 
 1. Define a tag in `lib/cache-tags.ts`.
 2. Add a `getXxx` in `server-queries.ts` using that tag.
-3. Call it from `app/(landing)/page.tsx` (use `Promise.all` so reads parallelize).
+3. Call it from `app/(site)/page.tsx` (use `Promise.all` so reads parallelize).
 4. In the admin form that mutates this data, pass the tag in `revalidateTags`.
 
 ## Performance tips

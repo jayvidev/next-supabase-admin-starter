@@ -2,10 +2,10 @@
 
 import { revalidatePath, revalidateTag } from 'next/cache'
 
-import { allLandingTags, type CacheTag } from '@/lib/cache-tags'
+import { allSiteTags, type CacheTag } from '@/lib/cache-tags'
 
-export async function revalidateLandingCache(tags?: CacheTag[]) {
-  const toInvalidate = tags && tags.length > 0 ? tags : allLandingTags
+export async function revalidateSiteCache(tags?: CacheTag[]) {
+  const toInvalidate = tags && tags.length > 0 ? tags : allSiteTags
   for (const tag of toInvalidate) revalidateTag(tag, 'max')
   revalidatePath('/', 'layout')
 }

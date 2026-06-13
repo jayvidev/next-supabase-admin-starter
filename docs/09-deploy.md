@@ -23,6 +23,6 @@
 
 - `https://yourdomain/admin` redirects to login.
 - `https://yourdomain/api/cloudinary/sign` returns 200 for an authenticated request (test from the admin).
-- `revalidateTag` works: edit a row, refresh the landing, see the update.
-- Lighthouse passes on the landing.
+- `revalidateTag` works: edit a row, refresh the site, see the update.
+- Lighthouse passes on the site.
 - Security headers from `next.config.ts` show in network panel.

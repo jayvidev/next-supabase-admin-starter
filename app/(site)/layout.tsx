@@ -5,7 +5,7 @@ import './globals.css'
 
 import '@fontsource-variable/onest'
 
-export default function LandingLayout({ children }: { children: ReactNode }) {
+export default function SiteLayout({ children }: { children: ReactNode }) {
   return (
     <>
       <NextTopLoader color="var(--color-primary)" height={2} easing="linear" showSpinner={false} />

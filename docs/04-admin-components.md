@@ -26,11 +26,11 @@ const form = useResourceForm({
   schema,                      // Zod schema
   mapDataToForm,               // Row → FormValues
   onSubmit,                    // (values) => Promise<void>
-  revalidateTags?,             // CacheTag[] passed to revalidateLandingCache
+  revalidateTags?,             // CacheTag[] passed to revalidateSiteCache
 })
 ```
 
-Handles: fetch + populate, react-hook-form integration, loading skeleton, error toast, success toast, automatic landing revalidation after save.
+Handles: fetch + populate, react-hook-form integration, loading skeleton, error toast, success toast, automatic site revalidation after save.
 
 ## `ResourceForm` / `ResourceDialog` / `DeleteAlertDialog`
 `features/admin/components/shared/`

@@ -19,7 +19,7 @@
       }
     ],
     "paths": {
-      "@landing/*": ["./features/landing/*"],
+      "@site/*": ["./features/site/*"],
       "@admin/*": ["./features/admin/*"],
       "@auth/*": ["./features/auth/*"],
       "@/*": ["./*"]

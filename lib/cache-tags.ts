@@ -1,8 +1,8 @@
 /**
- * Cache tags for landing revalidation — one per landing-read table.
+ * Cache tags for site revalidation — one per site-read table.
  *
- * Add a tag here when a table feeds the public landing, then pass it to
- * `revalidateLandingCache([cacheTags.xxx])` from the resource form's onSubmit.
+ * Add a tag here when a table feeds the public site, then pass it to
+ * `revalidateSiteCache([cacheTags.xxx])` from the resource form's onSubmit.
  *
  * Example:
  *   export const cacheTags = {
@@ -13,4 +13,4 @@ export const cacheTags = {} as const
 
 export type CacheTag = (typeof cacheTags)[keyof typeof cacheTags]
 
-export const allLandingTags: CacheTag[] = Object.values(cacheTags)
+export const allSiteTags: CacheTag[] = Object.values(cacheTags)

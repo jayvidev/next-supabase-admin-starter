@@ -6,7 +6,7 @@ import { useQueryClient } from '@tanstack/react-query'
 import { Trash2 } from 'lucide-react'
 import { toast } from 'sonner'
 
-import { revalidateLandingCache } from '@admin/actions/revalidate'
+import { revalidateSiteCache } from '@admin/actions/revalidate'
 
 import {
   AlertDialog,
@@ -72,7 +72,7 @@ export function DeleteAlertDialog({
       } else if (queryKey) {
         queryClient.invalidateQueries({ queryKey })
       }
-      revalidateLandingCache().catch(() => {})
+      revalidateSiteCache().catch(() => {})
       onClose()
     } catch {
       toast.error(errorMessage)

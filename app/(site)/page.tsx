@@ -1,6 +1,6 @@
 import { FileText } from 'lucide-react'
 
-import { Button } from '@landing/components/ui/button'
+import { Button } from '@site/components/ui/button'
 
 export default function Home() {
   return (
@@ -103,9 +103,7 @@ export default function Home() {
         <h2 className="text-2xl font-bold">Welcome to your Next.js + Supabase Admin starter!</h2>
         <p className="text-sm text-white/70 sm:text-base">
           This is a clean starter template. Start building your project by editing{' '}
-          <code className="rounded bg-white/10 px-1 py-0.5 font-semibold">
-            app/(landing)/page.tsx
-          </code>
+          <code className="rounded bg-white/10 px-1 py-0.5 font-semibold">app/(site)/page.tsx</code>
           .
         </p>
       </div>

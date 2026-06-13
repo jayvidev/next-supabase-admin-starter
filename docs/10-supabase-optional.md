@@ -1,6 +1,6 @@
 # 10 — Supabase (optional)
 
-Supabase is the database/auth provider, but the starter **boots and builds without it**. Use this to develop the landing or the admin shell before you have a project, and turn Supabase on later by adding two env vars — no code changes.
+Supabase is the database/auth provider, but the starter **boots and builds without it**. Use this to develop the site or the admin shell before you have a project, and turn Supabase on later by adding two env vars — no code changes.
 
 ## The switch
 
@@ -23,7 +23,7 @@ enabled: Boolean(NEXT_PUBLIC_SUPABASE_URL && NEXT_PUBLIC_SUPABASE_ANON_KEY)
 | `useUser()` | Resolves to `null`, `isLoading: false`. Sidebar/header just show "Admin". |
 | Logout buttons | Skip `signOut()`, still route to `/admin/login`. |
 | `lib/supabase/database.types.ts` | Already a committed empty baseline — **types do not break**. You do not need `pnpm db:types` (which requires `supabase login` + a linked project) until you enable. |
-| Landing queries | `server-queries.ts` ships with no live queries. Add them only after enabling. |
+| Site queries | `server-queries.ts` ships with no live queries. Add them only after enabling. |
 
 > Disabled = no auth gate. Don't deploy a real admin this way — it's for local dev before the DB exists.
 
