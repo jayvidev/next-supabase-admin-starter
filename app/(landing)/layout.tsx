@@ -3,6 +3,8 @@ import type { ReactNode } from 'react'
 
 import './globals.css'
 
+import '@fontsource-variable/onest'
+
 export default function LandingLayout({ children }: { children: ReactNode }) {
   return (
     <>

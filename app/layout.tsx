@@ -3,8 +3,8 @@ import type { ReactNode } from 'react'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Landing Admin Starter',
-    template: '%s | Landing Admin Starter',
+    default: 'Next.js + Supabase Admin Starter',
+    template: '%s | Next.js + Supabase Admin Starter',
   },
   description: 'Next.js + Supabase landing & admin starter',
 }

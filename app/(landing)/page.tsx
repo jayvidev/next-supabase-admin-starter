@@ -57,7 +57,7 @@ export default function Home() {
             </linearGradient>
           </defs>
         </svg>
-        <span className="text-3xl font-bold">+</span>
+        <h6 className="text-3xl font-bold">+</h6>
         <svg viewBox="0 0 109 113" className="size-16 sm:size-20" aria-label="Supabase" role="img">
           <path
             d="M63.7076 110.284C60.8481 113.885 55.0502 111.912 54.9813 107.314L53.9738 40.0627L99.1935 40.0627C107.384 40.0627 111.952 49.5228 106.859 55.9374L63.7076 110.284Z"
@@ -100,7 +100,7 @@ export default function Home() {
       </div>
 
       <div className="relative mx-auto max-w-xl space-y-4 text-center">
-        <h2 className="text-2xl font-bold">Welcome to your Next.js + Supabase starter!</h2>
+        <h2 className="text-2xl font-bold">Welcome to your Next.js + Supabase Admin starter!</h2>
         <p className="text-sm text-white/70 sm:text-base">
           This is a clean starter template. Start building your project by editing{' '}
           <code className="rounded bg-white/10 px-1 py-0.5 font-semibold">
@@ -129,8 +129,8 @@ export default function Home() {
           href="https://github.com/jayvidev/landing-admin-starter/tree/main/docs"
           target="_blank"
           rel="noopener noreferrer"
-          size="sm"
           variant="outline"
+          size="sm"
         >
           <FileText className="size-4" aria-hidden="true" />
           Readme

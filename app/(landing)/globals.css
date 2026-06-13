@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 @theme inline {
-  --font-inter: 'Inter Variable', sans-serif;
+  --font-onest: 'Onest Variable', sans-serif;
 
   --color-primary: #1d5941;
   --color-primary-dark: #1c3028;
@@ -19,18 +19,11 @@
   --breakpoint-xs: 30rem;
 }
 
-@font-face {
-  font-family: 'Inter Variable';
-  src: url('/fonts/inter-variable.woff2') format('woff2-variations');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
 @layer base {
   html {
     --header-height: 84px;
     scroll-padding-top: var(--header-height);
+    @apply font-onest scroll-smooth;
   }
 
   @media (min-width: 1024px) {
@@ -51,7 +44,7 @@
   }
 
   body {
-    @apply text-text bg-white font-inter antialiased;
+    @apply text-text bg-white antialiased;
   }
 
   ::-webkit-scrollbar {
