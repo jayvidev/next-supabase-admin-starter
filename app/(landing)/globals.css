@@ -44,7 +44,7 @@
   }
 
   body {
-    @apply text-text bg-white antialiased;
+    @apply text-text bg-white;
   }
 
   ::-webkit-scrollbar {
