@@ -112,7 +112,7 @@ export default function Home() {
 
       <div className="relative flex flex-wrap justify-center gap-4">
         <Button
-          href="https://github.com/jayvidev/landing-admin-starter"
+          href="https://github.com/jayvidev/next-supabase-admin-starter"
           target="_blank"
           rel="noopener noreferrer"
           size="sm"
@@ -126,7 +126,7 @@ export default function Home() {
           GitHub
         </Button>
         <Button
-          href="https://github.com/jayvidev/landing-admin-starter/tree/main/docs"
+          href="https://github.com/jayvidev/next-supabase-admin-starter/tree/main/docs"
           target="_blank"
           rel="noopener noreferrer"
           variant="outline"
